@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<persistence version="2.0"
+    xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+     
+    <persistence-unit name="WorkItems" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+         
+        
+          <class>com.rhiscom.cuadratura.model.BusinessUnit</class>
+          <class>com.rhiscom.cuadratura.model.PSDEBEntity</class>
+          <class>com.rhiscom.cuadratura.model.ARQGMEntity</class>
+          <class>com.rhiscom.cuadratura.model.CRCMREntity</class>
+          <class>com.rhiscom.cuadratura.model.LDTAEntity</class>
+          <class>com.rhiscom.cuadratura.model.PLCEntity</class>
+          <class>com.rhiscom.cuadratura.model.PLCUAEntity</class>
+          <class>com.rhiscom.cuadratura.model.PLDEntity</class>
+          <class>com.rhiscom.cuadratura.model.PLDTFEntity</class>
+          <class>com.rhiscom.cuadratura.model.PLGCEntity</class>
+          <class>com.rhiscom.cuadratura.model.PSCREEntity</class>
+          <class>com.rhiscom.cuadratura.model.PSTFPEntity</class>
+          <class>com.rhiscom.cuadratura.model.PVGCEntity</class>
+          <class>com.rhiscom.cuadratura.model.SCTFAEntity</class>
+          <class>com.rhiscom.cuadratura.model.RSATEntity</class>
+          <class>com.rhiscom.cuadratura.model.SATEntity</class>
+          
+          <class>com.rhiscom.cuadratura.model.CuadraturaActivacionGiftCardEntity</class>
+          <class>com.rhiscom.cuadratura.model.CuadraturaVtaCMREntity</class>
+          <class>com.rhiscom.cuadratura.model.CuadraturaVentasGiftCardEntity</class>
+          <class>com.rhiscom.cuadratura.model.CuadraturaAvanceSuperAvanceEntity</class>
+          <class>com.rhiscom.cuadratura.model.CuadraturaPagosCMREntity</class>
+          <class>com.rhiscom.cuadratura.model.CuadraturaTarjetaDeCreditoEntity</class>
+          <class>com.rhiscom.cuadratura.model.CuadraturaNotaCreditoEntity</class>
+          <class>com.rhiscom.cuadratura.model.CuadraturaTarjetaDebitoEntity</class>
+           
+          
+          
+          <class>com.rhiscom.cuadratura.model.LogFileload</class>
+        
+        
+        <properties>
+         <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost:3306/nucleo_base_cuadratura?autoReconnect=true" />
+			<property name="hibernate.connection.username" value="consolebpm" />
+			<property name="hibernate.connection.password" value="RH!sc0m" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="javax.persistence.validation.mode" value="none" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			
+			
+			
+			<property name="hibernate.c3p0.max_size" value="100" />
+	        <property name="hibernate.c3p0.min_size" value="0" />
+	        <property name="hibernate.c3p0.acquire_increment" value="1" />
+	        <property name="hibernate.c3p0.idle_test_period" value="300" />
+	        <property name="hibernate.c3p0.max_statements" value="0" />
+	        <property name="hibernate.c3p0.timeout" value="100" />
+			
+        </properties>
+        
+        
+        
+        
+      
+        
+    </persistence-unit>
+</persistence>
