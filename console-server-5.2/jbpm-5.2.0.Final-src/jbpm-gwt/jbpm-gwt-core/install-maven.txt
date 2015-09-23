@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=D:\JEE\JBPM5\SMUWorkItems1.1.jar -DgroupId=WorkItemsSMU  -DartifactId=jbpm-works-smu -Dversion=1.2 -Dpackaging=jar
