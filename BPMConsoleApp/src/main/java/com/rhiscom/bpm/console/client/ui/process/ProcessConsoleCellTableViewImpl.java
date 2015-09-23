@@ -13,7 +13,6 @@ import gwtquery.plugins.droppable.client.gwt.DroppableWidget;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.google.gwt.cell.client.TextCell;
@@ -436,7 +435,7 @@ public class ProcessConsoleCellTableViewImpl extends Composite implements HasTex
 
 		@Override
 		public void onSuccess(ProcessDefinitionsRS processDefinitionsRS) {
-		    logger.log(Level.INFO, ">> processDefinitionsRS = " + processDefinitionsRS);
+		    logger.info(">> processDefinitionsRS = " + processDefinitionsRS);
 		    List<DefinitionsRS> listDefinitionsRS = new ArrayList<DefinitionsRS>();
 
 		    listDefinitionsRS.addAll(processDefinitionsRS.getDefinitions());
