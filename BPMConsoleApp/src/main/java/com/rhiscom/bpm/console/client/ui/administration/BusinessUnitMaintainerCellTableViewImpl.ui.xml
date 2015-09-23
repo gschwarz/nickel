@@ -1,0 +1,141 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:with field='i18n' type='com.rhiscom.bpm.console.client.LocaleMessages'/>
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		
+		.cellTable {
+			height: 100%;
+			width: 100%;
+			border: 0px solid #ccc;
+			text-align: left;
+			padding: 5px;
+		}
+		.headerH2 {
+			background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		}
+
+		.cellTable tbody  tr {
+		
+			border-bottom: 1px solid #ccc;
+			height: 25px;
+			
+		}
+
+		.cellTable tbody  td {
+		
+			border: 0px solid #ccc;
+			
+		}
+
+		.cellTable thead {
+			height: 30px;
+		}
+		.rightHorizontalPanel {
+			  margin-right: 5px;
+			  border: 2px solid #E8E8E8;
+		}
+		.redBackground {
+			background-color:#628cd5 !important ;
+ 			
+  		}
+
+.gwt-MenuItem {
+		
+		width: 90px;
+		padding:1px;
+		background: #d3def6  url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		height: 20px; 
+  		border-bottom: 1px solid #555555;
+  		border-right:1px solid #555555;
+  		border-top:0px; 
+  		border-left:0px; 
+  		font-size: 12px; 
+  		color:black; 
+   	    padding-left: 6px; 
+  		cursor:hand; 
+  		cursor:pointer; 
+  		margin-left:10px; 
+  		margin-right:10px;
+  		outline-width:0px;
+	}
+	.gwt-MenuItem:hover{
+
+		background: #d3def6  url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		height: 20px; 
+  		background-color: #f5f5f0; 
+  		border-bottom: 1px solid #AAAAAA;
+  		border-right:1px solid #AAAAAA; 
+  		border-top:0px; 
+  		border-left:0px;
+  		font-size: 12px; 
+  		color:black; 
+		padding-left: 6px; 	
+  		cursor:hand; 
+  		cursor:pointer; 
+  		margin-left:10px; 
+  		margin-right:10px;
+  		outline-width:0px;
+
+  }	
+		
+		
+	</ui:style>
+	<g:HTMLPanel ui:field="htmlPanel">	
+	<table width="100%" valign="top">
+	    <tr style="background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px" >
+	       <td width="100%" colspan="2" style="height:30px;" >
+	            <div style="width:100%;height:100%;overflow:hidden;text-align:center; margin-top:6px">
+	               <span style="font-size: 1.1em; font-weight:bold;">
+	               <ui:text from='{i18n.businessUnitTitle}'/>.
+	            	 
+	            	</span>
+	            </div> 
+	        </td>
+	    </tr>
+			<tr>
+				<td valign='top'  width="100%">
+				    
+				      <g:HorizontalPanel styleName="{style.rightHorizontalPanel}" width="100%" >
+						<g:MenuBar title="Main" ui:field="menuBarProcesos" animationEnabled="true" autoOpen="false">
+							<g:MenuItem text="{i18n.create}" ui:field="btnAgregar" styleName="{style.gwt-MenuItem}"/>
+							<g:MenuItem text="{i18n.refresh}" ui:field="btnRefrescar" styleName="{style.gwt-MenuItem}" />
+						
+						</g:MenuBar>
+			</g:HorizontalPanel>
+			
+			   	<g:HorizontalPanel styleName="{style.rightHorizontalPanel}" width="100%" height="30" spacing="1" >
+			   		<g:Cell width="55" verticalAlignment="ALIGN_MIDDLE">
+			   			<g:Label text="{i18n.status} :" width="66px"  horizontalAlignment="ALIGN_LEFT"/>
+			   		</g:Cell>
+			   		<g:Cell width="80">
+			   			<g:ListBox ui:field="listadoEstadoListBox" width="100px"/>
+			   		</g:Cell>
+			   		<g:Cell width="50" verticalAlignment="ALIGN_MIDDLE">
+			   			<g:Label text="{i18n.businessGroup} :" width="114px"/>
+			   		</g:Cell>
+				      <g:ListBox ui:field="businessGroupListBox" visibleItemCount="1" width="100px"/>
+				      
+				</g:HorizontalPanel> 
+				
+					<g:ScrollPanel height="100%">
+					  
+						<c:CellTable  addStyleNames='{style.cellTable}' ui:field='cellTableBusinessUnit'  pageSize='12'/>
+					</g:ScrollPanel>	
+				</td>
+				
+				
+			</tr>
+			<tr>
+				<td>
+					<c:SimplePager ui:field='pager' />
+				</td> 
+			 </tr>
+			
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

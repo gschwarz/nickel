@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+xmlns:g='urn:import:com.google.gwt.user.client.ui' 
+ xmlns:dp="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		.panel {
+			background-color: ivory;
+		}
+	</ui:style>
+
+	<g:VerticalPanel spacing="2">
+		<g:VerticalPanel width="391px">
+			<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+				<g:Label text="Configuraci&oacute;n del proceso"/>
+			</g:Cell>
+		</g:VerticalPanel>
+		<g:HorizontalPanel>
+			<g:Cell verticalAlignment="ALIGN_MIDDLE">
+				<g:Label text="Fecha de inicio :" width="114px" horizontalAlignment="ALIGN_LEFT"/>
+			</g:Cell>
+			<dp:DateBox ui:field="initDate" />
+		</g:HorizontalPanel>
+		<g:Label text="Argumentos de inicio"/>
+		<g:TextArea width="231px" height="76px"/>
+	</g:VerticalPanel>
+</ui:UiBinder>

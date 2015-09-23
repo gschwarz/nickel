@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' 
+	xmlns:c='urn:import:com.google.gwt.user.cellview.client' 
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	 xmlns:dp='urn:import:com.google.gwt.user.datepicker.client'>
+	 
+	<ui:style>
+	 .important {
+			font-weight: bold;
+		}
+		.checkboxk {
+		margin: 2px;
+
+	}
+	
+	.lblError {
+		
+			background-color: #FF2828;
+			font-size: 11px;
+			color:black;
+			font-weight: bold;
+			border: 1px solid black;
+			height: 25px;
+			vertical-align: middle;
+	  }
+	  
+	  .lblMessage {
+		
+			
+			font-size: 11px;
+			color:black;
+			font-weight: bold;
+			
+			height: 25px;
+			vertical-align: middle;
+	  }
+	  
+		.cellTable {
+			height: 100%;
+			width:100%;
+			border: 1px solid #ccc;
+			text-align: left;
+			padding: 5px;
+			margin: 2px;
+			
+		}
+
+		.cellTable thead {
+			height: 30px;
+		}
+		.rightHorizontalPanel {
+			  margin-right: 5px;
+			  border: 2px solid #E8E8E8;
+		}
+		.redBackground {
+			background-color:#628cd5 !important ;
+ 			
+  		}
+	.title {
+	
+		font-size: 12px; 
+		color:#0B173B; 
+		font-weight: bold;
+		
+
+
+		}
+	.gwt-MenuItem {
+		
+		width: 90px;
+		padding:1px;
+		background: #d3def6  url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		height: 20px; 
+  		border-bottom: 1px solid #555555;
+  		border-right:1px solid #555555;
+  		border-top:0px; 
+  		border-left:0px; 
+  		font-size: 12px; 
+  		color:black; 
+		padding-left: 6px; 
+		cursor:hand; 
+  		cursor:pointer; 
+  		margin-left:10px; 
+  		margin-right:10px;
+  		outline-width:0px;
+  }
+	.gwt-MenuItem:hover{
+
+		background: #d3def6  url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		height: 20px; 
+  		background-color: #f5f5f0; 
+  		border-bottom: 1px solid #AAAAAA;
+  		border-right:1px solid #AAAAAA; 
+  		border-top:0px; 
+  		border-left:0px;
+  		font-size: 12px; 
+  		color:black; 
+		padding-left: 6px; 
+  		cursor:hand; 
+  		cursor:pointer; 
+  		margin-left:10px; 
+  		margin-right:10px;
+  		outline-width:0px;
+	}	
+    .demo-hr {
+                     border:        1px solid #9A9A9A;
+             } 
+	</ui:style>
+
+<g:HTMLPanel ui:field="htmlPanel"  width="100%">	
+	<table width="100%">
+	    <tr style="height:39px;background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px">
+	        
+	       
+	       <td width="100%" colspan="2" style="height:30px;" >
+	            
+	           <div style="width:100%;height:100%;overflow:hidden;text-align:center; margin-top:6px">
+	                
+	               <span style="font-size: 12px; font-weight:bold;">
+	            	Configuraci&oacute;n horas de ejecuci&oacute;n
+	            	</span>
+	            </div> 
+	        </td>
+	  
+	    </tr>
+	</table>	
+	<g:HorizontalPanel styleName="{style.rightHorizontalPanel}" width="100%" >
+						<g:MenuBar title="Main" ui:field="menuBarProcesos" animationEnabled="true" autoOpen="false">
+							<g:MenuItem text="Refrescar definiciones" ui:field="btnRefrescar" styleName="{style.gwt-MenuItem}" width="130px"/>
+							
+								
+						</g:MenuBar>
+					</g:HorizontalPanel>	
+			<g:HorizontalPanel width="100%">
+			
+				<g:Cell  width="400px">
+					<g:VerticalPanel horizontalAlignment="ALIGN_LEFT" addStyleNames='{style.cellTable}' width="300px" height="100%">
+					 	<g:Label text="Procesos registrados" styleName="{style.title}" />
+					 	<g:HorizontalPanel styleName="{style.demo-hr}"  height="1px"
+							width="100%">
+							</g:HorizontalPanel>
+					 	<c:CellList ui:field="cellList" pageSize="12"  width="100%"/>
+					 		
+					<c:SimplePager location="LEFT" ui:field="pagerCellList" />
+					 </g:VerticalPanel>
+				</g:Cell>
+				<g:Cell width="99%">
+					<g:VerticalPanel width="99%" addStyleNames='{style.cellTable}' height="100%">
+						
+						<g:VerticalPanel  width="100%">
+						
+								
+								 <g:Label ui:field="lblProceso" horizontalAlignment="ALIGN_LEFT" width="100%"  styleName="{style.lblMessage}"/>   
+  								 <g:Label ui:field="lblError" styleName="{style.lblError}" height="18px"/>
+							
+						</g:VerticalPanel>
+						<g:HorizontalPanel>
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="Periodicidad" width="200px" horizontalAlignment="ALIGN_LEFT"/>
+							</g:Cell>
+							<g:CheckBox text="L" styleName="{style.checkboxk}" ui:field="chkLunes"/>
+							<g:CheckBox text="M" styleName="{style.checkboxk}" ui:field="chkMartes"/>
+							<g:CheckBox text="M" styleName="{style.checkboxk}" ui:field="chkMiercoles"/>
+							<g:CheckBox text="J" styleName="{style.checkboxk}" ui:field="chkJueves"/>
+							<g:CheckBox text="V" styleName="{style.checkboxk}" ui:field="chkViernes"/>
+							<g:CheckBox styleName="{style.checkboxk}" text="S" ui:field="chkSabado"/>
+							<g:CheckBox styleName="{style.checkboxk}" text="D" ui:field="chkDomingo"/>
+						</g:HorizontalPanel>
+						<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="Horario de ejecuci&oacute;n" width="200px"/>
+							</g:Cell>
+							<g:ListBox ui:field="cmbHoras" width="45px"/>
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="hrs" width="27px" styleName="{style.checkboxk}"/>
+							</g:Cell>
+							<g:ListBox width="45px" ui:field="cmbMinutos"/>
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="mins" width="38px" styleName="{style.checkboxk}"/>
+							</g:Cell>
+						</g:HorizontalPanel>
+						<g:HorizontalPanel>
+							<g:Cell width="200px" verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="Fecha Inicio ejecución" width="200px"/>
+							</g:Cell>
+							<dp:DateBox ui:field="initDate"/>
+							<g:Cell verticalAlignment="ALIGN_MIDDLE" width="200px" horizontalAlignment="ALIGN_CENTER">
+								<g:Label text="Fecha fin ejecución" width="127px"/>
+							</g:Cell>
+							<dp:DateBox ui:field="endDate"/>
+						</g:HorizontalPanel>
+						<g:HorizontalPanel>
+						
+						</g:HorizontalPanel>
+						
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="">
+							<g:HorizontalPanel width="">
+							<g:Button text="Guardar" ui:field="btnGuardar"/>
+						</g:HorizontalPanel>
+						</g:Cell>
+						<g:SimplePanel width="400px">
+						<c:CellTable width="100%" ui:field="detailInstance"></c:CellTable>
+						</g:SimplePanel>
+						
+						
+					</g:VerticalPanel>
+				</g:Cell>
+				<g:VerticalPanel/>
+				<g:VerticalPanel>
+						<g:Label/>
+					</g:VerticalPanel>
+						
+					</g:HorizontalPanel>
+				
+					
+			
+				
+			
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.LoginService
+path: 0C846B3ADFB7D96154AAFA3C8AC68C60.gwt.rpc

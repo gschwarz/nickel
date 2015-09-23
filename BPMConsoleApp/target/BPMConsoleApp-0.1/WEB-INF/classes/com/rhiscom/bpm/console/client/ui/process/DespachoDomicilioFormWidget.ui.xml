@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:style>
+		
+	</ui:style>
+
+	<g:VerticalPanel verticalAlignment="ALIGN_TOP" width="100%">
+	<g:HorizontalPanel width="100%">
+			<g:HTMLPanel ui:field="htmlCliente" width="100%">
+				<table width="100%">
+					<tr
+						style="height:39px;background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px">
+
+
+						<td width="100%" colspan="2" style="height:30px;">
+
+							<div
+								style="width:100%;height:100%;overflow:hidden;text-align:center; margin-top:6px">
+								<span style="font-size: 12px; font-weight:600;">
+									Datos del cliente
+								</span>
+							</div>
+						</td>
+
+					</tr>
+				</table>
+			</g:HTMLPanel>
+		</g:HorizontalPanel>
+	<g:HorizontalPanel width="275px">
+		<g:Label text="Numero de cliente :" width="125px"/>
+		<g:Label ui:field="lblNumeroCliente" width="150px"/>
+	</g:HorizontalPanel>
+	<g:HorizontalPanel width="275px">
+		<g:Label text="Nombre completo :" width="125px"/>
+		<g:Label ui:field="lblNombreCompleto" width="150px"/>
+	</g:HorizontalPanel>
+	<g:HorizontalPanel width="275px" ui:field="lblPanel">
+		<g:Label text="Dirección de envío :" width="125px"/>
+		<g:Label width="150px" ui:field="lblDireccion"/>
+	</g:HorizontalPanel>
+	<g:HorizontalPanel width="275px">
+		<g:Label text="Correo electrónico :" width="125px"/>
+		<g:Label ui:field="lblCorreo" width="150px"/>
+	</g:HorizontalPanel>
+	<g:HorizontalPanel width="275px">
+		<g:Label text="Telefono de contacto :" width="125px"/>
+		<g:Label width="150px" ui:field="lblTelefono"/>
+	</g:HorizontalPanel>
+	
+	
+		<g:HorizontalPanel  width="100%">
+			<g:HTMLPanel ui:field="htmlVenta" width="100%">
+				<table width="100%">
+					<tr
+						style="height:39px;background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px">
+
+
+						<td width="100%" colspan="2" style="height:30px;">
+
+							<div
+								style="width:100%;height:100%;overflow:hidden;text-align:center; margin-top:6px">
+								<span style="font-size: 12px; font-weight:600;">
+									Datos de la venta
+								</span>
+							</div>
+						</td>
+
+					</tr>
+				</table>
+			</g:HTMLPanel>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel height="21px" width="275px"
+			verticalAlignment="ALIGN_MIDDLE">
+			<g:Label text="Id Pedido :" width="125px" />
+			<g:Label ui:field="lblIdPedido" width="150px" height="" />
+		</g:HorizontalPanel>
+		<g:HorizontalPanel width="275px" ui:field="lblFecha">
+			<g:Label text="Fecha de generación :" horizontalAlignment="ALIGN_LEFT"
+				width="125px" />
+			<g:Label ui:field="lblfechaGeneracion" width="150px" />
+		</g:HorizontalPanel>
+		<g:HorizontalPanel width="275px">
+			<g:Label text="Total venta :" width="125px" />
+			<g:Label width="150px" ui:field="lblTotalVenta" />
+		</g:HorizontalPanel>
+		<g:HorizontalPanel width="275px">
+			<g:Label text="Local de generación :" width="125px" />
+			<g:Label ui:field="lblLocal" width="150px" />
+		</g:HorizontalPanel>
+		<g:HorizontalPanel width="275px">
+			<g:Label text="Estado :" width="125px"/>
+			<g:Label ui:field="lblEstadoVenta" width="150px"/>
+		</g:HorizontalPanel>
+
+	</g:VerticalPanel>
+</ui:UiBinder>

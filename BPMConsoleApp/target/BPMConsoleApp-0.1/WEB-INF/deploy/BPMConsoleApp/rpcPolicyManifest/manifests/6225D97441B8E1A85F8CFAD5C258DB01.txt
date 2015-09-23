@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.SecurityService
+path: E87B9C35B454F1F8DF6DC50118554DC1.gwt.rpc

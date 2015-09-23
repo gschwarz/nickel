@@ -1,0 +1,74 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+   xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		
+		.cellTable {
+			height: 100%;
+			width: 100%;
+			border: 1px solid #ccc;
+			text-align: left;
+		}
+
+		.cellTable thead {
+			height: 30px;
+		}
+		.rightHorizontalPanel {
+			  margin-right: 5px;
+			  border: 2px solid #E8E8E8;
+		}
+		
+		
+	</ui:style>
+	
+	<g:HTMLPanel ui:field="htmlPanel">	
+	<table width="100%">
+	    <tr>
+	        
+	        <td>
+	            <g:HorizontalPanel styleName="{style.rightHorizontalPanel}">
+												<g:MenuBar title="Main" ui:field="menuBar" animationEnabled="false" autoOpen="true">
+													<g:MenuItem text="Consultar" ui:field="btnConsultar">
+															<g:MenuBar vertical="true">
+													
+																<g:MenuItem text="Todas las tiendas" ui:field="btnConsultarTiendas"/>
+																
+															</g:MenuBar>
+															</g:MenuItem>
+														<g:MenuItem text="Acciones" ui:field="btnAccount">
+															<g:MenuBar vertical="true">
+																<g:MenuItem text="Abrir todas tiendas" ui:field="btnAbrirTienda"/>
+																<g:MenuItem text="Cerrar todas tiendas" ui:field="btnCerrarTienda"/>
+															</g:MenuBar>
+														</g:MenuItem>
+													
+												</g:MenuBar>
+											</g:HorizontalPanel>
+	          
+	        </td>
+	    </tr>
+			<tr>
+				<td valign='top'>
+					<g:ScrollPanel  width="50%" height="100%">
+						<c:CellTable addStyleNames='{style.cellTable}' ui:field='cellTableEstadoTienda'  pageSize='16'/>
+					</g:ScrollPanel>	
+				</td>
+				<td valign='top'>
+					<g:ScrollPanel  width="50%" height="100%">
+						
+					</g:ScrollPanel>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<c:SimplePager ui:field='pager' />
+				</td> 
+			 </tr>
+			
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

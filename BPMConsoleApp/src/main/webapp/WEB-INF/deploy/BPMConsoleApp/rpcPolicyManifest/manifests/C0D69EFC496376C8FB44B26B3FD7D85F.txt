@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.ResolverGroupsService
+path: 708DB50085ACC0D4BC96D5DC8EE07B8F.gwt.rpc

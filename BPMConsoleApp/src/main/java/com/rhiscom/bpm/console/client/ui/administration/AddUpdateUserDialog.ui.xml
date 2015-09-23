@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui' 
+xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+<ui:with field='i18n' type='com.rhiscom.bpm.console.client.LocaleMessages'/>
+	<ui:style>
+		.panel {
+			
+			paddign: 50px;
+			
+		}
+		.panel td {
+			height: 20px !important;
+		}
+		
+		.alignRight {
+			margin-top:10px;
+			right:0px;
+			float:right;
+			margin-right:2px;
+		}
+		
+		.alignLeft {
+			margin-top:10px;
+			left:0px;
+			float:left;
+			margin-left:2px;
+		}
+		.td {
+			height: 20px !important;
+			vertical-align:top;
+
+			}
+		.border-decorator {
+			margin-top:6px;
+			border: 1px solid #c5c5c5;
+			 -webkit-border-radius: 5px;
+  			-moz-border-radius: 5px;
+             border-radius: 5px;
+              padding: 7px;
+
+		}
+		.lblError {
+		
+			background-color: #FF2828;
+			font-size: 11px;
+			color:black;
+			font-weight: bold;
+			border: 1px solid black;
+			height: 25px;
+			vertical-align: middle;
+	  }
+	</ui:style>
+	<g:VerticalPanel styleName="{style.panel}" height="400px" width="600px" verticalAlignment="ALIGN_TOP" horizontalAlignment="ALIGN_CENTER">
+
+	
+	<g:HTML wordWrap="true" height="20px" ><h4> <ui:text from='{i18n.userMaintainerTitle}'/></h4> </g:HTML>
+	<g:Cell height="18px">
+		<g:Label ui:field="lblError" styleName="{style.lblError}" height="18px"/>
+	</g:Cell>
+		<g:Cell height="30">
+		<g:HorizontalPanel>
+	
+			<g:VerticalPanel height="250px" width="200px" styleName="{style.border-decorator}">
+		    <g:HTML wordWrap="true">
+		    <h4> 
+		    	<ui:text from='{i18n.userData}'/>
+		    </h4> </g:HTML>
+			
+			<g:HorizontalPanel width="270px">
+				<g:Cell verticalAlignment="ALIGN_MIDDLE" width="122px">
+					<g:Label text="{i18n.name} :" width="122px"/>
+				</g:Cell>
+				<g:Cell width="139px">
+					<g:TextBox width="139px" ui:field="txtNombre"/>
+				</g:Cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="270px" >
+				<g:Cell width="122px" verticalAlignment="ALIGN_MIDDLE">
+					<g:Label text="{i18n.middleName} :" width="122px"/>
+				</g:Cell>
+				<g:TextBox width="139px" ui:field="txtSegundoNombre"/>
+				
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="270px">
+				<g:Cell width="122px" verticalAlignment="ALIGN_MIDDLE">
+					<g:Label text="{i18n.lastName} :" width="122px"/>
+				</g:Cell>
+				<g:Cell width="139px">
+					<g:TextBox width="139px" ui:field="txtApellido"/>
+				</g:Cell>
+			</g:HorizontalPanel>
+			
+				<g:HorizontalPanel width="270px">
+					<g:Cell verticalAlignment="ALIGN_MIDDLE"  width="122px" >
+						<g:Label text="{i18n.rut} :" width="122px" horizontalAlignment="ALIGN_LEFT" height="20px"/>
+					</g:Cell>
+					
+					<g:Cell width="139px">
+						<g:TextBox width="139px"  ui:field='txtIdentification' />
+					</g:Cell>
+				</g:HorizontalPanel>
+			<g:HorizontalPanel width="270px">
+				<g:Cell width="122px" verticalAlignment="ALIGN_MIDDLE" height="20px">
+					<g:Label text="{i18n.email} :" width="122px" height="20px" horizontalAlignment="ALIGN_LEFT"/>
+				</g:Cell>
+				<g:Cell width="139px">
+					<g:TextBox width="139px" ui:field="txtEmail"/>
+				</g:Cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="270px">
+				<g:Cell width="122px">
+					<g:Label text="{i18n.gender} :" width="122px"/>
+				</g:Cell>	
+				<g:Cell width="139px">
+					<g:ListBox visibleItemCount="1" width="149px" ui:field="lstGender">
+						<g:item value='1'>
+						    <ui:text from='{i18n.male}'/>
+						  </g:item>
+						  <g:item value='2'>
+						     <ui:text from='{i18n.female}'/>
+						  </g:item>
+	 				 </g:ListBox>
+ 				 </g:Cell>
+ 				
+			</g:HorizontalPanel>		
+			
+			
+				
+			</g:VerticalPanel>
+			<g:Cell width="20px">
+				<g:HorizontalPanel width="20px"/>
+			</g:Cell>
+			
+			<g:VerticalPanel height="250px"  width="250px" styleName="{style.border-decorator}">
+			    <g:HTML wordWrap="true"><h4>  <ui:text from='{i18n.inputDataUser}'/></h4> </g:HTML>
+			    <g:Cell width="270px">
+			    	<g:HorizontalPanel horizontalAlignment="ALIGN_LEFT" width="270px" verticalAlignment="ALIGN_MIDDLE">
+					<g:Cell width="122px">
+						<g:Label   ui:field="lblNombre" text="{i18n.user} :" styleName="{style.td}" width="122px"/>
+					</g:Cell>
+					<g:Cell width="139px">
+						<g:TextBox ui:field='txtUser' styleName="{style.td}" width="139px"/>
+					</g:Cell>
+				</g:HorizontalPanel>
+			    </g:Cell>
+			
+				<g:HorizontalPanel width="270px">
+					<g:Cell verticalAlignment="ALIGN_MIDDLE" width="122px">
+						<g:Label text="{i18n.password} :" width="122px"/>
+					</g:Cell>
+					
+					<g:Cell width="139px">
+						<g:PasswordTextBox width="139px"  ui:field='txtPassword' styleName="{style.td}"/>
+					</g:Cell>
+				</g:HorizontalPanel>
+				<g:HorizontalPanel width="270px">
+				<g:Cell width="122px">
+					<g:Label text="{i18n.userType} :" width="122px"/>
+				</g:Cell>
+					<g:Cell width="150px">
+						<g:ListBox visibleItemCount="1" width="149px" ui:field="lstParty">
+							<g:item value='1'>
+							 <ui:text from='{i18n.systemUser}'/>
+							  
+							  </g:item>
+							  <g:item value='2'>
+							    <ui:text from='{i18n.client}'/>
+							  </g:item>
+		 				 </g:ListBox>
+ 				 
+ 				</g:Cell>
+ 					
+			</g:HorizontalPanel>		
+			<g:HorizontalPanel horizontalAlignment="ALIGN_LEFT" width="270px" verticalAlignment="ALIGN_MIDDLE">
+						<g:Cell width="122px">
+							<g:Label   ui:field="lblPerfil" text="{i18n.profile} :" styleName="{style.td}" width="122px"/>
+						</g:Cell>
+						<g:Cell width="149px">
+							<g:ListBox ui:field='lstPerfil' styleName="{style.td}"  width="149px"  visibleItemCount="1"/>
+						</g:Cell>
+			</g:HorizontalPanel>
+			
+			<g:HorizontalPanel horizontalAlignment="ALIGN_LEFT" width="270px" verticalAlignment="ALIGN_MIDDLE">
+						<g:Cell width="122px">
+							<g:Label   ui:field="lblBusinessUnit" text="{i18n.businessUnit} :" styleName="{style.td}" width="122px"/>
+						</g:Cell>
+						<g:Cell width="149px">
+							<g:ListBox ui:field='lstBusinessUnit' styleName="{style.td}"  width="149px"  visibleItemCount="1"/>
+						</g:Cell>
+			</g:HorizontalPanel>
+				<g:Cell width="100%">
+					<g:VerticalPanel height="10px" width="100%"/>
+				</g:Cell>
+			
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			</g:Cell>
+			<g:Cell>
+			<g:VerticalPanel  height="10px"  />
+			</g:Cell>
+		<g:HorizontalPanel  width="680px" >
+				<g:HTMLPanel>
+					<div style="margin-top:10px;left:0px;float:left;margin-left:2px;">
+			    		<g:Button  ui:field='btnCancelar' text="{i18n.cancel}" width="80px" height="25px"  />
+			    	</div>
+			    </g:HTMLPanel>
+			    <g:HTMLPanel>
+			    	<div style="margin-top:10px;right:0px;float:right;margin-right:2px;">
+						<g:Button  ui:field='btnGuardar' text="{i18n.save}" width="80px" height="25px"  />
+					</div>
+				 </g:HTMLPanel>
+			</g:HorizontalPanel>		
+	</g:VerticalPanel>
+</ui:UiBinder>

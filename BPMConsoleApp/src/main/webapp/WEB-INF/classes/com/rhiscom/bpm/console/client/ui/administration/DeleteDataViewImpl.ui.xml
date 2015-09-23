@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel width="500px" horizontalAlignment="ALIGN_CENTER">
+			<p1:DatePicker ui:field="Calendario"/>
+		</g:VerticalPanel>
+		<g:VerticalPanel height="39px" width="500px">
+				<g:Label text="Se eliminara toda la información ingresada con anterioridad a la fecha seleccionada. ESTA ACCIÓN NO SE PUEDE DESHACER." horizontalAlignment="ALIGN_CENTER"/>
+			</g:VerticalPanel>
+		<g:VerticalPanel width="500px" height="67px" horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+			<g:Button styleName="{style.important}" ui:field="button" text="Eliminar" />
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

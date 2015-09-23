@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.DeleteDataService
+path: 8964C9C60977453BBE6FDF24222AA2F2.gwt.rpc

@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p="urn:import:com.rhiscom.bpm.console.client.ui">
+	<ui:with field='res' type='com.rhiscom.bpm.console.client.ui.RootViewImageResources'/>
+	<ui:with field='i18n' type='com.rhiscom.bpm.console.client.LocaleMessages'/>
+	<ui:style src="RootView.css" />
+
+	<g:DockLayoutPanel unit='EM'>
+		<g:north size='4'>
+			<g:FlowPanel styleName="{style.northPanel}">
+				<g:HTMLPanel styleName='{style.titleBar}'>
+					<g:Image width="97px" height="50px" url="img/logo-header.png"
+						styleName="{style.margin}" />
+
+					<table cellpadding='0' cellspacing='0'
+						style="float: right; vertical-align:middle; height:22px; position: absolute; top:2px; left: 83%">
+						<tr>
+							<td valign='middle' height='50' width="200px" align="right">
+								<table cellpadding='0' cellspacing='2' width="200px"
+									style="float: right; color:#FFF;vertical-align:middle; height:20px; ">
+									<tr>
+									    
+										<td width="24px" height="20" align="left" class="tdTextLoginImg">
+											<g:Image ui:field='logoutButton' url='{res.getCloseIcon.getSafeUri.asString}' 
+											    pixelSize='24,20' styleName='{style.logoutButton}' title='{i18n.logout}' />
+										</td>
+										<td width="24px" height="20" align="left" class="tdTextLoginImg">
+											<img src="img/User-Go-32.png" width="23" />
+										</td>
+										<td width="90px" height="20" align="left" class="tdTextLogin">
+											<g:Label ui:field="userLogged" styleName='{style.textLogged}' />
+
+										</td>
+										<td  height="20" align="left" width="200px" >
+										<h5>	v1.0.23 </h5>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</g:HTMLPanel>
+			</g:FlowPanel>
+		</g:north>
+		<g:west size='19'>
+			<g:SimplePanel ui:field="leftPanel" styleName="{style.eastPanel}"></g:SimplePanel>
+		</g:west>
+		<g:center>
+			<g:ScrollPanel ui:field='rightPanel' styleName="{style.rightHorizontalPanel}" />
+		</g:center>
+
+	</g:DockLayoutPanel>
+
+</ui:UiBinder> 

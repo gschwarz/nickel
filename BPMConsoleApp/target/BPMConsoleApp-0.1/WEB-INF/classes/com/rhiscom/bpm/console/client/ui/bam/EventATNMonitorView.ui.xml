@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' 
+		xmlns:g='urn:import:com.google.gwt.user.client.ui' 
+		xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:with field='i18n' type='com.rhiscom.bpm.console.client.LocaleMessages'/>
+	
+	<ui:style>
+			.cellTable {
+				height: 100%;
+				width: 100%;
+				border: 1px solid #ccc;
+				text-align: left;
+				padding: 2px;
+			}
+	</ui:style>
+
+	
+	
+	<g:VerticalPanel width="100%" height="100%">
+	
+	<g:HTMLPanel ui:field="htmlPanel">	
+		<table width="100%" valign="top">
+	    <tr style="background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px" >
+	       <td width="100%" colspan="2" style="height:30px;" >
+	            <div style="width:100%;height:100%;overflow:hidden;text-align:center; margin-top:6px">
+	               <span style="font-size: 1.1em; font-weight:bold;">
+	            	 SuiteTestCase Activity Monitoring
+	            	</span>
+	            </div> 
+	        </td>
+	    </tr>
+	    </table><!--  -->
+	    </g:HTMLPanel>
+
+		
+		
+	<g:HTMLPanel  width="100%">	
+	<div style="width:100%;height:100%;overflow:hidden;text-align:center; margin-top:6px">
+	               <span style="font-size: 1.1em; font-weight:bold;">
+	             		<ui:text from='{i18n.executionLog}'/>
+	            	</span>
+	            </div> 
+	<g:HorizontalPanel  width="100%">
+	<g:VerticalPanel spacing="1" width="100%">
+	<g:HTMLPanel>	
+			<table  width="100%" style ="border: 1px solid #ccc">
+				<thead>
+					<th width="100%">
+						Suite Test Case 
+					</th>
+				</thead>
+			<tr>
+			<td width="50%">
+				Nombre plan de Pruebas :
+			</td>
+			<td  width="50%">
+				<g:Label ui:field="STCName"/>
+			
+			</td>
+			</tr>
+			<tr>
+			<td width="50%">
+				Fecha Inicio :
+			</td>
+			<td width="50%">
+				<g:Label ui:field="STCStartDate"/>
+			
+			</td>
+			</tr>
+			<tr>
+			<td width="50%">
+				Fecha termino :
+			</td>
+			<td width="50%">
+				<g:Label ui:field="STCEndDate"/>
+			
+			</td>
+			</tr>
+			</table>
+			
+			
+			</g:HTMLPanel>
+	
+			<g:SimplePanel ui:field="instancesPanel" />
+			
+			
+	</g:VerticalPanel>		
+			<g:VerticalPanel width="680px" verticalAlignment="ALIGN_TOP" horizontalAlignment="ALIGN_RIGHT" spacing="1">
+		
+			<c:CellTable  addStyleNames='{style.cellTable}' ui:field='cellTablelog'  pageSize='10'/>
+			<c:SimplePager ui:field='pager' />
+		</g:VerticalPanel>
+			
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+			
+	
+	</g:VerticalPanel>
+
+</ui:UiBinder>

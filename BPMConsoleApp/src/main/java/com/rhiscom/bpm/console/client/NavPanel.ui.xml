@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+  .tasks {
+    padding: 0.5em;
+    line-height: 150%;
+  }
+
+  .item {
+    display: block;
+  }
+  </ui:style>
+	<g:FlowPanel styleName='{style.tasks}'>
+    <g:Button ui:field='servicios' styleName='{style.item}'>Servicios</g:Button>
+    <g:Button ui:field='estados' styleName='{style.item}'>Servicios</g:Button>
+  </g:FlowPanel>
+</ui:UiBinder> 

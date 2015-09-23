@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.QuadratureService
+path: 6FF31B174D5ECBF927601E1B73428115.gwt.rpc

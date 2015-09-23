@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.DespachoDomicilioService
+path: CB0ED96E46D93FF5627C80333199679A.gwt.rpc

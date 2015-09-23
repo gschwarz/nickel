@@ -1,0 +1,21 @@
+.panel {
+	padding: 3px;
+}
+
+.cellTable {
+	height: 100%;
+	width: 100%;
+	border: 1px solid #ccc;
+	text-align: left;
+	padding: 5px;
+}
+
+.lblError {
+	background-color: #FF2828;
+	font-size: 11px;
+	color: black;
+	font-weight: bold;
+	border: 1px solid black;
+	height: 25px;
+	vertical-align: middle;
+}

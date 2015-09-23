@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+
+	<persistence-unit name="TaskPersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!-- <non-jta-data-source>java:jboss/datasources/rh-bpm-task</non-jta-data-source> -->
+		<class>com.rhiscom.bpm.console.task.entity.Attachment</class>
+		<class>com.rhiscom.bpm.console.task.entity.Booleanexpression</class>
+		<class>com.rhiscom.bpm.console.task.entity.Content</class>
+		<class>com.rhiscom.bpm.console.task.entity.Deadline</class>
+		<class>com.rhiscom.bpm.console.task.entity.EmailHeader</class>
+		<class>com.rhiscom.bpm.console.task.entity.Escalation</class>
+		<class>com.rhiscom.bpm.console.task.entity.I18ntext</class>
+		<class>com.rhiscom.bpm.console.task.entity.Notification</class>
+		<class>com.rhiscom.bpm.console.task.entity.NotificationEmailHeader</class>
+		<class>com.rhiscom.bpm.console.task.entity.NotificationEmailHeaderPK</class>
+		<class>com.rhiscom.bpm.console.task.entity.Organizationalentity</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.Reassignment</class>
+		<class>com.rhiscom.bpm.console.task.entity.Subtasksstrategy</class>
+		<class>com.rhiscom.bpm.console.task.entity.Task</class>
+		<class>com.rhiscom.bpm.console.task.entity.TaskComment</class>
+		<!-- If you are running in a production environment, add a managed data 
+			source, the example data source is just for development and testing! -->
+		<!-- <jta-data-source>java:jboss/datasources/Vigia-BPM-MonitoringDS</jta-data-source> -->
+    <exclude-unlisted-classes/>
+		<properties>
+			<!-- Properties for Hibernate -->
+			
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/bpm_task" />
+			<property name="hibernate.connection.username" value="consolebpm" />
+			<property name="hibernate.connection.password" value="RH!sc0m" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="javax.persistence.validation.mode" value="none" />
+
+			 
+
+	        <property name="hibernate.c3p0.max_size" value="100" />
+	        <property name="hibernate.c3p0.min_size" value="0" />
+	        <property name="hibernate.c3p0.acquire_increment" value="1" />
+	        <property name="hibernate.c3p0.idle_test_period" value="300" />
+	        <property name="hibernate.c3p0.max_statements" value="0" />
+	        <property name="hibernate.c3p0.timeout" value="100" />
+			
+
+			
+		</properties>
+	</persistence-unit>
+
+
+
+
+	<persistence-unit name="ConfigurationConsolePersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- Retail Domain -->
+		<class>com.rhiscom.bpm.console.server.model.entity.BusinessGroup</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.BusinessGroupLevel</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.BusinessUnit</class>
+
+		<!-- WorkGroup -->
+		<class>com.rhiscom.bpm.console.server.model.entity.ResolverGroup</class>
+
+		<!-- Usuarios -->
+		<class>com.rhiscom.bpm.console.server.model.entity.Person</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.Worker</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.Operator</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.Profile</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.AccessProfileFunctionalityAbility</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.Ability</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.FunctionalityModule</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.OperatorResolverGroup</class>
+
+		<!-- Nortification -->
+		<class>com.rhiscom.bpm.console.server.model.entity.NotificationMessage</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.EmailConfiguration</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.RecipientsByEvent</class>
+
+		<!-- Core Case -->
+		<class>com.rhiscom.bpm.console.server.model.entity.CoreCase</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.Cliente</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.VentaDomicilio</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.DetalleVenta</class>
+
+		<!--Jobs -->
+		<class>com.rhiscom.bpm.console.server.model.entity.ProcessScheduler</class>
+		
+		
+		<!--Cuadratura Sodimac -->
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaVtaCMR</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaActivacionGiftCard</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.POSVersion</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaVentasGiftCard</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaAvanceSuperAvance</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaPagosCMR</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaTarjetaCredito</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaNotaCredito</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.CuadraturaTarjetaDebito</class>
+		
+		
+		<!--  -->
+        <class>com.rhiscom.bpm.console.server.model.entity.PSDEBEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.ARQGMEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.CRCMREntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.LDTAEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PLCEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PLCUAEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PLDEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PLDTFEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PLGCEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PSCREEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PSTFPEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.PVGCEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.SCTFAEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.RSATEntity</class>
+        <class>com.rhiscom.bpm.console.server.model.entity.SATEntity</class>
+		
+		
+     <exclude-unlisted-classes/>
+		
+		<properties>
+			<!-- Properties for Hibernate -->
+			
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost:3306/nucleo_base_cuadratura?autoReconnect=true" />
+			<property name="hibernate.connection.username" value="consolebpm" />
+			<property name="hibernate.connection.password" value="RH!sc0m" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="javax.persistence.validation.mode" value="none" />
+		<!-- 	<property name="hibernate.hbm2ddl.auto" value="update" /> -->
+			
+		 
+
+	        <property name="hibernate.c3p0.max_size" value="100" />
+	        <property name="hibernate.c3p0.min_size" value="0" />
+	        <property name="hibernate.c3p0.acquire_increment" value="1" />
+	        <property name="hibernate.c3p0.idle_test_period" value="300" />
+	        <property name="hibernate.c3p0.max_statements" value="0" />
+	        <property name="hibernate.c3p0.timeout" value="100" />
+			
+			
+			
+		</properties>
+
+	</persistence-unit>
+
+	<persistence-unit name="ProcessPersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>com.rhiscom.bpm.console.server.model.entity.NodeInstanceLog</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.ProcessInstanceInfo</class>
+		<class>com.rhiscom.bpm.console.server.model.entity.ProcessInstanceLog</class>
+
+		<properties>
+			<!-- Properties for Hibernate -->
+			
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.show_sql" value="false" />
+			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/rhbpmdb"/> -->
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost:3306/bpm_db_process?autoReconnect=true" />
+			<property name="hibernate.connection.username" value="consolebpm" />
+			<property name="hibernate.connection.password" value="RH!sc0m" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="javax.persistence.validation.mode" value="none" />
+			
+		 
+
+	        <property name="hibernate.c3p0.max_size" value="100" />
+	        <property name="hibernate.c3p0.min_size" value="0" />
+	        <property name="hibernate.c3p0.acquire_increment" value="1" />
+	        <property name="hibernate.c3p0.idle_test_period" value="300" />
+	        <property name="hibernate.c3p0.max_statements" value="0" />
+	        <property name="hibernate.c3p0.timeout" value="100" />
+			
+			
+
+		</properties>
+	</persistence-unit>
+
+	
+   
+</persistence>

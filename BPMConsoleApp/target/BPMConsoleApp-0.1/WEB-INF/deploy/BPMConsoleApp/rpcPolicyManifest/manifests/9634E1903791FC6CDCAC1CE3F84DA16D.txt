@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.UserService
+path: 10F444EB7F5D7C6815411E7CF557808B.gwt.rpc

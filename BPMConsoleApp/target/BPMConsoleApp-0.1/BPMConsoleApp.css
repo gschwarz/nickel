@@ -1,0 +1,420 @@
+/** Add css rules here for your application. */
+.gwt-Button { /*padding: 10px 15px !important;*/
+	background: #4479BA !important;
+	color: #FFF !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	border: solid 1px #20538D !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4) !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-webkit-transition-duration: 0.2s !important;
+	-moz-transition-duration: 0.2s !important;
+	transition-duration: 0.2s !important;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+	margin: 2px !important;;
+}
+
+.gwt-Button:hover {
+	background: #356094 !important;
+	border: solid 1px #2A4E77 !important;
+	text-decoration: none !important;
+}
+
+.gwt-Button:active {
+	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+	background: #2E5481 !important;
+	border: solid 1px #203E5F !important;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #585858;
+}
+
+#backgroundLogin {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #424242;
+	z-index: -1;
+}
+
+.flexTable td {
+	border: 1px solid #BBBBBB;
+	padding: 3px;
+}
+
+.flexTable-buttonPanel td {
+	border: 0px;
+}
+
+.fixedWidthButton {
+	width: 150px;
+}
+
+hr {
+	border: 1px solid #424242;
+	color: #424242;
+	width: 100%;
+	height: 2px;
+	background-color: #424242;
+}
+
+.treeStyle {
+	cursor: pointer;
+}
+
+.gwt-TreeItem:HOVER {
+	background-color: #BDBDBD;
+	width: 210px;
+	height: 30px;
+}
+
+.shadow {
+	-moz-box-shadow: -1px -3px -3px -3px #A4A4A4;
+	-webkit-box-shadow: -1px -3px -3px -3px #A4A4A4;
+	box-shadow: -1px -3px -3px -3px #A4A4A4;
+	filter: shadow(color = #999999, direction = 135, strength = 2);
+}
+
+.center {
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	margin-top: -100px !important;
+	margin-left: -100px !important;
+	font-weight: bold;
+	padding: 10px;
+}
+/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 0px 70px;
+	text-align: center;
+}
+
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+.gwt-Label {
+	color: black;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+/** Most GWT widgets already have a style name defined */
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+.center-block {
+	text-align: center;
+}
+
+.nav-panel {
+	height: 260px;
+	padding-top: 15px;
+	boder-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.nav-button {
+	width: :130px;
+	height: 30px;
+	margin: 5px !important;
+}
+
+.redBorderAlert {
+	border: 2px solid #FF2828;
+}
+
+.lblError {
+	background-color: #FF2828;
+	font-size: 9px;
+	color: black;
+	font-weight: bold;
+	border: 1px solid black;
+}
+
+.buttonActualizar button {
+	background-color: #4479BA !important;
+	color: #FFF !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	border: solid 1px #20538D !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4) !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-webkit-transition-duration: 0.2s !important;
+	-moz-transition-duration: 0.2s !important;
+	transition-duration: 0.2s !important;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+	background-image: url(img/Refresh_32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonActualizar button:hover {
+	background-color: #356094 !important;
+	border: solid 1px #2A4E77 !important;
+	text-decoration: none !important;
+	background-image: url(img/Refresh_32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonVer button {
+	background-color: #4479BA !important;
+	color: #FFF !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	border: solid 1px #20538D !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4) !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-webkit-transition-duration: 0.2s !important;
+	-moz-transition-duration: 0.2s !important;
+	transition-duration: 0.2s !important;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+	background-image: url(img/View-32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonVer button:hover {
+	background-color: #356094 !important;
+	border: solid 1px #2A4E77 !important;
+	text-decoration: none !important;
+	background-image: url(img/View-32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonEditar button {
+	background-color: #4479BA !important;
+	color: #FFF !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	border: solid 1px #20538D !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4) !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-webkit-transition-duration: 0.2s !important;
+	-moz-transition-duration: 0.2s !important;
+	transition-duration: 0.2s !important;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+	background-image: url(img/Edit-32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonEditar button:hover {
+	background-color: #356094 !important;
+	border: solid 1px #2A4E77 !important;
+	text-decoration: none !important;
+	background-image: url(img/Edit-32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonAdd button {
+	background-color: #4479BA !important;
+	color: #FFF !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	border: solid 1px #20538D !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4) !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-webkit-transition-duration: 0.2s !important;
+	-moz-transition-duration: 0.2s !important;
+	transition-duration: 0.2s !important;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+	background-image: url(img/Add-32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonAdd button:hover {
+	background-color: #356094 !important;
+	border: solid 1px #2A4E77 !important;
+	text-decoration: none !important;
+	background-image: url(img/Add-32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px !important;;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+.buttonBorrar button {
+	background-color: #4479BA !important;
+	color: #FFF !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	border: solid 1px #20538D !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4) !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px
+		rgba(0, 0, 0, 0.2) !important;
+	-webkit-transition-duration: 0.2s !important;
+	-moz-transition-duration: 0.2s !important;
+	transition-duration: 0.2s !important;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+	background-image: url(img/Delete-32.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	width: 95px;
+	height: 23px !important;;
+	font-size: 12px !important;
+}
+
+
+
+.cw-StackPanelHeader {
+	padding-left: 7px;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #0000 !important;
+	float: left;
+}
+
+.gwt-StackLayoutPanelHeader {
+	float: left;
+}
+
+.panel-StackPanelHeader {
+	
+}
+
+table td {
+	font-size: 12px !important;
+}
+
+.tdTextLogin {
+	width: 90px !important;;
+}
+
+.tdTextLoginImg {
+	width: 24px !important;
+}
+
+.border-decorator {
+	boder: 1px solid #000;
+}
+
+.exportCellList {
+	height: 360px;
+	text-align: left;
+	width: 100%;
+	overflow: auto;
+}
+
+.notification {
+	
+	background-repeat: repeat-x;
+	border: 1px solid #424242;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 2px;
+	background-color: #0B2161;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.notification-text {
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 11px;
+	text-align: center;
+}

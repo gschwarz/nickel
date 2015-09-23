@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <!-- POM file generated with GWT webAppCreator -->
+  <modelVersion>4.0.0</modelVersion>
+  
+  <repositories>
+             
+    <repository>
+        <id>jboss-public-repository-group</id>
+        <name>JBoss Public Repository Group</name>
+        <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+    </repository>
+       
+  
+        <repository>
+         <id>plugins</id>
+         <url>http://gwtquery-plugins.googlecode.com/svn/mavenrepo</url>
+       </repository>
+
+       
+    
+</repositories>
+  
+  <groupId>com.rhiscom.bpm.console</groupId>
+  <artifactId>BPMConsoleApp2</artifactId>
+  <packaging>war</packaging>
+  <version>0.1</version>
+  <name>GWT Maven Archetype</name>
+
+  <properties>
+    <!-- Convenience property to set the GWT version -->
+    <gwtVersion>2.4.0</gwtVersion>
+    <!-- GWT needs at least java 1.5 -->
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+  </properties>
+  
+
+  
+
+  <dependencies>
+    
+      
+
+            
+      
+         <dependency>
+            <groupId>com.googlecode.gwtquery.bundles</groupId>
+            <artifactId>gquery-dnd-bundle</artifactId>
+            <version>1.0.5</version>
+            <scope>compile</scope>
+        </dependency>
+      
+   <dependency>
+		<groupId>org.codehaus.btm</groupId>
+		<artifactId>btm</artifactId>
+		<version>2.1.3</version>
+	</dependency>   
+      
+      
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-servlet</artifactId>
+      <version>${gwtVersion}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>${gwtVersion}</version>
+      <scope>compile</scope>
+    </dependency>  
+    
+    
+      <dependency>
+      <groupId>com.googlecode.visualization</groupId>
+      <artifactId>gwt-visualization</artifactId>
+      <version>1.1.2</version>
+      <scope>compile</scope>
+    </dependency>  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.7</version>
+      <scope>test</scope>
+    </dependency>
+    
+    
+		  <dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>2.3.5.Final</version>
+			<scope>compile</scope>
+		</dependency>
+		            
+           <dependency>
+			<groupId>de.novanic.gwteventservice</groupId>
+			<artifactId>gwteventservice</artifactId>
+			<version>1.2.1</version>
+			<scope>compile</scope>
+		</dependency> 
+
+       
+           
+    <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>jsr311-api</artifactId>
+        <version>0.2</version>
+        <scope>compile</scope>
+      </dependency>
+    
+    <dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>
+		<version>2.2</version>
+		<scope>compile</scope>
+   </dependency>
+   
+       <dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+			<scope>compile</scope>
+		</dependency>
+             
+    
+    <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-dev</artifactId>
+        <version>2.4.0</version>
+        <type>jar</type>
+        <scope>compile</scope>
+	</dependency>
+	<dependency>
+		<groupId>dom4j</groupId>
+		<artifactId>dom4j</artifactId>
+		<version>1.6.1</version>
+	</dependency>
+	
+<!--  HIBERNATE  -->
+            
+     
+	          
+            
+  		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<version>1.0.1.Final</version>
+			  <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.5.Final</version>
+			  <scope>compile</scope>
+		</dependency>
+	     
+		<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>4.2.5.Final</version>
+		 <scope>compile</scope>
+		</dependency>
+
+	<!-- <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>4.0.1.Final</version>
+		 <scope>compile</scope>
+	</dependency> -->
+	
+	<dependency>
+		<groupId>org.hibernate.common</groupId>
+		<artifactId>hibernate-commons-annotations</artifactId>
+		<version>4.0.2.Final</version>
+		 <scope>compile</scope>
+	</dependency>
+	
+		
+     <dependency>
+		<groupId>javax.validation</groupId>
+		<artifactId>validation-api</artifactId>
+		<version>1.0.0.GA</version>
+	 <scope>compile</scope>
+	</dependency> 
+        
+	 <dependency>
+		<groupId>org.jboss.logging</groupId>
+		<artifactId>jboss-logging</artifactId>
+		<version>3.1.0.CR2</version>
+		 <scope>compile</scope>
+	</dependency>   
+	
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-c3p0</artifactId>
+		<version>4.2.5.Final</version>
+		<scope>compile</scope>
+	</dependency>
+     
+      
+ <!--  FIN HIBERNATE -->       
+ 
+    
+    
+    
+       
+  
+    
+      <dependency>
+	    <groupId>com.allen-sauer.gwt.dnd</groupId>
+	    <artifactId>gwt-dnd</artifactId>
+	    <version>3.2.3</version>
+	      <scope>compile</scope>
+    </dependency>
+    
+
+    
+    
+    
+      <dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>5.1.9</version>
+	  <scope>compile</scope>
+</dependency>
+    
+      <dependency>
+	<groupId>net.sf.jasperreports</groupId>
+	<artifactId>jasperreports</artifactId>
+	<version>4.7.1</version>
+	<scope>compile</scope>
+</dependency>
+
+<dependency>
+	<groupId>com.lowagie</groupId>
+	<artifactId>itext</artifactId>
+	<version>4.2.1</version>
+</dependency>
+            
+      
+      
+  </dependencies>
+
+  <build>
+    <!-- Generate compiled stuff in the folder used for developing mode -->
+    <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+
+    <plugins>
+
+      <!-- GWT Maven Plugin -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+	      <version>2.4.0</version>
+	        <executions>
+	          <execution>
+	            <goals>
+								<goal>compile</goal>
+								<goal>test</goal>
+							</goals>
+	          </execution>
+	        </executions>
+        <!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
+          documentation at codehaus.org -->
+        <configuration>
+          <runTarget>BPMConsoleApp.html</runTarget>
+          <hostedWebapp>${webappDirectory}</hostedWebapp>
+          <i18nMessagesBundle>com.rhiscom.bpm.console.client.Messages</i18nMessagesBundle>
+        </configuration>
+      </plugin>
+
+      <!-- Copy static web files before executing gwt:run -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+       <version>2.3</version>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>exploded</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <webappDirectory>${webappDirectory}</webappDirectory>
+           <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive> 
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

@@ -1,0 +1,155 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		.simplePanel {
+			height: 100% !important;
+			
+		}
+
+		.borderBottom {
+			border-bottom:1px solid  #c5c5c5;
+		}
+		 .divContent { position: static; }
+		
+		.detailPanel{ 			
+		    background-color: #f5f5f5;
+		    border-top: 1px solid #c5c5c5;
+		    bottom: 0px;
+		    left:0px;
+		    padding-left: 3px;
+		    padding-right: 3px;
+		    
+		 
+		    }
+		
+		.cellTable {
+			height: 100%;
+			width: 100%;
+			border: 0px solid #ccc;
+			text-align: left;
+			padding: 5px;
+		}
+		.headerH2 {
+			background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		}
+
+		.cellTable tbody  tr {
+		
+			border-bottom: 1px solid #ccc;
+			height: 25px;
+			
+		}
+
+		.cellTable td {
+		
+			border: 0px solid #ccc;
+			font-size: 10px;
+			
+		}
+
+		.cellTable thead {
+			height: 30px;
+		}
+		.rightHorizontalPanel {
+			  margin-right: 5px;
+			  border: 2px solid #E8E8E8;
+		}
+		.redBackground {
+			background-color:#628cd5 !important ;
+ 			/*border: 0px !important;*/
+			/*color: #FFFFFF !important;*/
+  		}
+
+.gwt-MenuItem {
+		
+		width: 90px;
+		padding:1px;
+		background: #d3def6  url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		height: 20px; 
+  		border-bottom: 1px solid #555555;
+  		border-right:1px solid #555555;
+  		border-top:0px; 
+  		border-left:0px; 
+  		font-size: 12px; 
+  		color:black; 
+   	    padding-left: 6px; 
+  		cursor:hand; 
+  		cursor:pointer; 
+  		margin-left:10px; 
+  		margin-right:10px;
+  		outline-width:0px;
+	}
+	.gwt-MenuItem:hover{
+
+		background: #d3def6  url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px;
+		height: 20px; 
+  		background-color: #f5f5f0; 
+  		border-bottom: 1px solid #AAAAAA;
+  		border-right:1px solid #AAAAAA; 
+  		border-top:0px; 
+  		border-left:0px;
+  		font-size: 12px; 
+  		color:black; 
+		padding-left: 6px; 	
+  		cursor:hand; 
+  		cursor:pointer; 
+  		margin-left:10px; 
+  		margin-right:10px;
+  		outline-width:0px;
+
+
+
+  }	
+		
+		
+	</ui:style>
+	<g:VerticalPanel ui:field="htmlPanel" width="100%" height="100%" styleName="{style.divContent}">	
+	<g:HTMLPanel>
+	<table width="100%" height="100%">
+	    <tr style="height:39px; background: #d3def6 url(BPMConsoleApp/gwt/chrome/images/hborder.png) repeat-x 0px -989px" >
+	         <td width="100%" colspan="2" style="height:30px;" >
+	            
+	           <div style="width:100%;height:100%;overflow:hidden;text-align:center; margin-top:6px">
+	               <span style="font-size: 1.1em; font-weight:bold;">
+	            	 	Monitoreo de Tareas en curso
+	            	</span>
+	            </div> 
+	        </td>
+	    </tr>
+	 </table>
+	 </g:HTMLPanel>
+	 
+		
+				    
+				      <g:HorizontalPanel styleName="{style.rightHorizontalPanel}" width="100%" >
+						<g:MenuBar title="Main" ui:field="menuBarProcesos" animationEnabled="true" autoOpen="false">
+							<g:MenuItem text="Refrescar" ui:field="btnRefrescar" styleName="{style.gwt-MenuItem}"/>
+							</g:MenuBar>
+							
+			</g:HorizontalPanel>
+				     
+				      <g:HTMLPanel>
+					   <table width="100%" height="500px">
+					     	 <tr>
+								<td  width="100%" height="100%">
+						      	<g:ScrollPanel height="100%" styleName="{style.simplePanel}" width="99%">
+								<c:CellTable  addStyleNames='{style.cellTable}' ui:field='cellTableAsignedTask'  pageSize='8' height="100%" width="100%"/>
+								</g:ScrollPanel>
+								</td>
+							</tr>
+						</table>	
+					</g:HTMLPanel>						
+					
+				     
+					<g:Cell>
+						<c:SimplePager ui:field='pager'  height="20px" />
+					</g:Cell>
+
+	
+	</g:VerticalPanel>
+</ui:UiBinder> 

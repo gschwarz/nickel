@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+	.panel {
+					
+		   padding: 2px;
+	
+       }
+       .title {
+			font-weight: bold;
+			color:#0B173B; 
+	    
+			}
+					
+		.border-decorator {
+			
+			border: 1px solid #c5c5c5;
+			 -webkit-border-radius: 5px;
+  			-moz-border-radius: 5px;
+             border-radius: 5px;
+             padding: 2px;
+             height: 100%;
+             margin: 5px;
+
+		}
+	  .demo-hr {
+            border:        1px solid #9A9A9A;
+        } 
+	</ui:style>
+
+	<g:FlowPanel styleName="{style.panel}" width="99%" height="100%">
+		
+	</g:FlowPanel>
+</ui:UiBinder>

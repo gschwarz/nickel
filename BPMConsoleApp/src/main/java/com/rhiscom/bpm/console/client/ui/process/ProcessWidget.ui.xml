@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:style>
+		.panel {
+			border: 1px solid #c5c5c5;
+			background-color: #f5f5f5;
+			-webkit-user-select: none;
+			 -khtml-user-select: none;
+			 -moz-user-select: none;
+			 -o-user-select: none;
+			 -ms-user-select: none;
+			 user-select: none;
+			
+		}
+		.panel:hover {
+			background-color: #f5f5f5;
+			border: 1px solid #c5c5c5;
+			
+		}
+	</ui:style>
+
+	<g:VerticalPanel>
+		<g:HorizontalPanel width="213px" verticalAlignment="ALIGN_TOP" styleName="{style.panel}" height="70px">
+			<g:Image url="img/ProcessAdd.png" width="28px" height="28px"/>
+			<g:Label text="Process Name" ui:field="processName" width="150px" height="70px" horizontalAlignment="ALIGN_CENTER"/>
+		</g:HorizontalPanel></g:VerticalPanel>
+</ui:UiBinder>

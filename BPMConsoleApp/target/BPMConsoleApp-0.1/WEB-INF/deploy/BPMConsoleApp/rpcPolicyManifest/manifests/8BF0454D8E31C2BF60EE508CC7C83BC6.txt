@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.MonitoreoService
+path: CDF4945335954F66E063951B37FD9483.gwt.rpc

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' 
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.google.gwt.user.datepicker.client" 
+	xmlns:p2="urn:import:com.google.gwt.user.cellview.client">
+		<ui:style src="ReporteCuadratura.css" />
+
+	<g:VerticalPanel width='100%'>
+		<g:VerticalPanel width="100%">
+			<g:HTMLPanel ui:field="htmlPanel" width="100%">
+				<table width="100%" valign="top">
+					<tr class="{style.title-background}">
+						<td width="100%" colspan="2" style="height:30px;">
+							<div class="{style.title-background-position}">
+								<g:Label ui:field="title" styleName="{style.title}" text="Cuadratura Trajeta de Debito" />
+							</div>
+						</td>
+					</tr>
+				</table>
+			</g:HTMLPanel>
+			
+			<g:HorizontalPanel width="100%" horizontalAlignment="ALIGN_CENTER">
+				<g:Label horizontalAlignment="ALIGN_CENTER" width="99%" height="20px" ui:field="lblError" styleName="lblError" text="Debe ingresar fecha de negocio"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.filters}"
+				width="100%">
+				
+				<g:VerticalPanel>
+					<g:Label text="Sucursal" width="100px" height="" />
+					<g:ListBox ui:field="sucursalSeleccionada" width="100px" height="25px" />
+				</g:VerticalPanel>
+				<g:VerticalPanel>
+					<g:Label text="Fecha de negocio" />
+					<p1:DateBox ui:field="dateOfBusinessDateBox" />
+				</g:VerticalPanel>
+				<g:Button ui:field="filterButton" text="Buscar" />
+				<g:Button ui:field="excelButton" text="Exportar" />
+				<g:VerticalPanel>
+					<g:Label text="Versión" />
+					<g:Label width="100px" height="25px" ui:field="lblVersionPOS" styleName="{style.second-title}"/>
+				</g:VerticalPanel>
+				
+				
+			</g:HorizontalPanel>
+			<g:Cell width="100%">
+				<g:HorizontalPanel width="100%" spacing="2">
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}">
+					<g:VerticalPanel  width="100%">
+						<g:Label text="Revisi&oacute;n de D&eacute;bito" styleName="{style.second-title}"/>
+						<g:Label text="PLCUA" width="100%" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+					<g:VerticalPanel width="100%">
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="Tarjeta debito" width="215px" height="25px" horizontalAlignment="ALIGN_LEFT"/>
+							</g:Cell>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblTarjetaDebitoPLCUA"   />
+							</g:Cell>
+						</g:HorizontalPanel>
+						
+						
+						
+					</g:VerticalPanel>
+				</g:VerticalPanel>
+				
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}">
+				<g:VerticalPanel  width="100%">
+						<g:Label styleName="{style.second-title}" height="16px"/>
+						<g:Label text="PSDEB" width="100%" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%"> 
+					<g:Cell width="150px" height="25px">
+						<g:Label text="Total Ventas Tarjeta de Debito" width="215px" height="25px"/>
+					</g:Cell>
+					<g:Cell width="150px" height="25px" horizontalAlignment="ALIGN_RIGHT">
+						<g:Label  height="25px" width="100px" ui:field="lblTotalVentasTarjetaDebitoPSDEB"  />
+					</g:Cell>
+						</g:HorizontalPanel>
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Label text="Total Ventas Internet Debito" width="215px" height="25px"/>
+							<g:Cell width="150px" height="25px" horizontalAlignment="ALIGN_RIGHT">
+								<g:Label width="100px" height="25px"  horizontalAlignment="ALIGN_RIGHT" ui:field="lblTotalVentasInternetDebitoPSDEB"   />
+							</g:Cell>
+						</g:HorizontalPanel>
+						
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Cell width="198px" height="25px">
+								<g:Label text="Total Recaudaciones" width="215px" height="25px"/>
+							</g:Cell>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblTotalRecaudacionesPSDEB" />
+							</g:Cell>
+						</g:HorizontalPanel>
+						
+					
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Cell width="190px" height="25px">
+								<g:Label text="Total PSDEB" width="215px" height="25px"  styleName="{style.red-title}"/>
+							</g:Cell>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px"   styleName="{style.red-title}" ui:field="lblTotalPSDEB"  />
+							</g:Cell>
+						</g:HorizontalPanel>
+				</g:VerticalPanel>
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}" horizontalAlignment="ALIGN_LEFT">
+				<g:VerticalPanel  width="100%">
+						<g:Label styleName="{style.second-title}" height="16px"/>
+						<g:Label text="PLVDB" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Label text="Total Vta. Tarjeta Debito" width="60%" height="25px"/>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="50px" height="25px" ui:field="lblTotalVentasTarjetaDebitoPLD"   />
+							</g:Cell>
+						</g:HorizontalPanel>
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Label text="Total Vta. Internet Debito" width="60%" height="25px"/>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="50px" height="25px" ui:field="lblTotalVentasInternetTarjetaDebitoPLD"  />
+							</g:Cell>
+						</g:HorizontalPanel>
+
+					
+						
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Label text="Total PLVDB" width="60%" height="25px"  styleName="{style.red-title}" />
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="50px" height="25px"   styleName="{style.red-title}" ui:field="lblTotalPLD"  />
+							</g:Cell>
+						</g:HorizontalPanel>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			</g:Cell>
+			<g:HorizontalPanel spacing="2" width="100%">
+				<g:VerticalPanel styleName="{style.border-decorator}" width="350px">
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PLCUA " width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPLCUA" />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PSDEB" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPSDEB2"   />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Diferencia" width="215px" height="25px"  styleName="{style.red-title}"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px"   styleName="{style.red-title}" ui:field="lblDiferenciaPLCUAPSDEB"  />
+						</g:Cell>
+					</g:HorizontalPanel>
+				</g:VerticalPanel >
+				<g:VerticalPanel styleName="{style.border-decorator}" width="350px">
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PSDEB" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPSDEB3"  />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PLVDB" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPLD2"    />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Diferencia" width="215px" height="25px"  styleName="{style.red-title}"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px"   styleName="{style.red-title}" ui:field="lblDiferenciaPSDEBPLD"   />
+						</g:Cell>
+					</g:HorizontalPanel>
+				
+					
+					</g:VerticalPanel>
+					<g:VerticalPanel  width="350px">
+				
+				
+					
+					</g:VerticalPanel>
+			</g:HorizontalPanel>
+			
+		
+		
+					<g:HorizontalPanel spacing="2" width="100%">
+				<g:VerticalPanel styleName="{style.border-decorator}" width="350px">
+					<g:VerticalPanel  width="100%">
+						<g:Label text="Revisi&oacute;n pago remoto debito" styleName="{style.second-title}"/>
+						<g:Label text="PLCUA" width="100%" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Pago Remoto Debito" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px" ui:field="lblPagoRemotoPLCUA"    />
+						</g:Cell>
+					</g:HorizontalPanel>
+					
+				</g:VerticalPanel >
+				<g:VerticalPanel styleName="{style.border-decorator}" width="350px">
+				
+				<g:VerticalPanel  width="100%">
+						<g:Label text="" styleName="{style.second-title}" height="16px"/>
+						<g:Label text="PSDEB" width="100%" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Total Ventas pago Remoto Debito" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalVentasPagoRemotoPSDEB"  />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Total Anulación Pago Remoto Debito" width="215px" height="25px"  />
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px"   styleName="{style.red-title}" ui:field="lblTotalAnulacionPagoRemotoPSDEB"   />
+						</g:Cell>
+					</g:HorizontalPanel>
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Label text="Total Pago Remoto PSDEB" width="60%" height="25px"  styleName="{style.red-title}" />
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="30px" height="25px"   styleName="{style.red-title}" ui:field="totalPagoRemotoPSDEB" />
+							</g:Cell>
+						</g:HorizontalPanel>
+					
+					</g:VerticalPanel>
+				<g:VerticalPanel styleName="{style.border-decorator}" width="350px">
+				
+			<g:VerticalPanel  width="100%">
+						<g:Label text="" styleName="{style.second-title}" height="16px"/>
+						<g:Label text="PLVDB" width="100%" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Total Ventas pago Remoto Debito" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px" ui:field="totlaVentasPagoRemotoPLD"   />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Total Anulación Pago Remoto Debito" width="215px" height="25px"  />
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="40%" height="25px"   styleName="{style.red-title}" ui:field="lblTotalAnulacionPagoRemotoPLD"   />
+						</g:Cell>
+					</g:HorizontalPanel>
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Label text="Total Pago Remoto PLVDB" width="60%" height="25px"  styleName="{style.red-title}" />
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="30px" height="25px"   styleName="{style.red-title}" ui:field="totalPagoRemotoPLD"  />
+							</g:Cell>
+						</g:HorizontalPanel>
+					
+					</g:VerticalPanel>
+			</g:HorizontalPanel>
+			
+					<g:HorizontalPanel spacing="2" width="100%">
+				<g:VerticalPanel styleName="{style.border-decorator}" width="350px">
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PLCUA " width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPagoRemotoPLCUA2" />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PSDEB" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPagoRemotoPSDEB" />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Diferencia" width="215px" height="25px"  styleName="{style.red-title}"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px"   styleName="{style.red-title}" ui:field="lblDiferenciaPagoRemotoPLCUAPSDEB"  />
+						</g:Cell>
+					</g:HorizontalPanel>
+				</g:VerticalPanel >
+				<g:VerticalPanel styleName="{style.border-decorator}" width="350px">
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PSDEB" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPagoRemotoPDEB2"  />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="PLVDB" width="215px" height="25px"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px" ui:field="lblTotalPagoRemotoPLD"    />
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+						<g:Label text="Diferencia" width="215px" height="25px"  styleName="{style.red-title}"/>
+						<g:Cell horizontalAlignment="ALIGN_RIGHT" width="150px" height="25px">
+							<g:Label  width="100px" height="25px"   styleName="{style.red-title}" ui:field="lblDiferenciaPagoRemotoPSDEBPLD"  />
+						</g:Cell>
+					</g:HorizontalPanel>
+				
+					
+					</g:VerticalPanel>
+					<g:VerticalPanel  width="350px">
+				
+				
+					
+					</g:VerticalPanel>
+			</g:HorizontalPanel>
+		
+		
+		</g:VerticalPanel>
+		
+	
+	</g:VerticalPanel>
+</ui:UiBinder>

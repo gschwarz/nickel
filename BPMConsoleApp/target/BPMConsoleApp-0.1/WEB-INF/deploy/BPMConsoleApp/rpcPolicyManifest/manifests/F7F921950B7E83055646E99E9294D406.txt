@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.ReportService
+path: A8576E38906834DA3843ABED056DF3D1.gwt.rpc

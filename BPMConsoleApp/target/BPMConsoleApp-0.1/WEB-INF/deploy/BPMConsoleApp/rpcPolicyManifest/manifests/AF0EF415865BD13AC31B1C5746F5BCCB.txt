@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.RetailDomainService
+path: DA5C15E0CE8FA5D71FB971FBC98EFF30.gwt.rpc

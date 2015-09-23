@@ -1,0 +1,88 @@
+@CHARSET "ISO-8859-1";
+
+.eastPanel {
+	vertical-align: top;
+	border: 1px solid #E8E8E8;
+	width: 235px !important;
+	position: absolute;
+	top: 0;
+	left: 5px !important;
+	background-color: #F2F2F2;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+.westPanel {
+	background-color: #EEE;
+}
+
+.northPanel {
+	/*background-image: url(img/bg-header.png);*/
+	background-color: #0B2161;
+	background-repeat: repeat-x;
+	color: black;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.title {
+	color: #FFFFFF;
+	font-size: 20pt;
+	font-weight: bold;
+	text-shadow: #ddd 3px 3px 1px;
+	margin: 0;
+	padding: 0 0 0 4px;
+}
+
+.textLogged {
+	color: #FFFFFF !important;
+	width: 90px !important;
+}
+
+.subtitle {
+	color: #FFFFFF;
+	font-size: 16pt;
+	margin: 0;
+	padding: 0 0 0 6px;
+}
+
+.titleBar {
+	padding: 0 10px;
+	border-bottom: 1px solid #C3C3C3;
+}
+
+.pushButton {
+	background-color: #6D86B7;
+	outline: medium none;
+	border-style: solid solid none;
+	border-width: 1px 1px 0;
+	padding: 5px 5px 5px 3px;
+}
+
+.menuButton {
+	background-color: #6D86B7;
+	outline: medium none;
+	border-style: solid solid none;
+	border-width: 1px 1px 0;
+	/* padding: 5px 5px 5px 3px; */
+}
+
+.rightHorizontalPanel {
+	margin-right: 5px;
+	margin-left: 1px;
+	border: 1px solid #E8E8E8;
+}
+
+.southPanel {
+	margin-top: 2px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+.margin {
+	margin-left: 12px;
+}
+
+.logoutButton {
+	cursor: pointer;
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' 
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.google.gwt.user.datepicker.client" 
+	xmlns:p2="urn:import:com.google.gwt.user.cellview.client">
+		<ui:style src="ReporteCuadratura.css" />
+
+	<g:VerticalPanel width='100%'>
+		<g:VerticalPanel width="100%">
+			<g:HTMLPanel ui:field="htmlPanel" width="100%">
+				<table width="100%" valign="top">
+					<tr class="{style.title-background}">
+						<td width="100%" colspan="2" style="height:30px;">
+							<div class="{style.title-background-position}">
+								<g:Label ui:field="title" styleName="{style.title}" text="Cuadratura Nota de Cr&eacute;dito" />
+							</div>
+						</td>
+					</tr>
+				</table>
+			</g:HTMLPanel>
+			
+			<g:HorizontalPanel width="100%" horizontalAlignment="ALIGN_CENTER">
+				<g:Label horizontalAlignment="ALIGN_CENTER" width="99%" height="20px" ui:field="lblError" styleName="lblError" text="Debe ingresar fecha de negocio"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.filters}"
+				width="100%">
+				
+				<g:VerticalPanel>
+					<g:Label text="Sucursal" width="100px" height="" />
+					<g:ListBox ui:field="sucursalSeleccionada" width="100px" height="25px" />
+				</g:VerticalPanel>
+				<g:VerticalPanel>
+					<g:Label text="Fecha de negocio" />
+					<p1:DateBox ui:field="dateOfBusinessDateBox" />
+				</g:VerticalPanel>
+				<g:Button ui:field="filterButton" text="Buscar" />
+				<g:Button ui:field="excelButton" text="Exportar" />
+				<g:VerticalPanel>
+					<g:Label text="Versi&oacute;n" />
+					<g:Label width="100px" height="25px" ui:field="lblVersionPOS" styleName="{style.second-title}"/>
+				</g:VerticalPanel>
+				
+				
+			</g:HorizontalPanel>
+			<g:Cell width="100%">
+				<g:HorizontalPanel width="100%" spacing="2">
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}">
+					<g:VerticalPanel  width="100%">
+						<g:Label text="Revisión de credito" styleName="{style.second-title}"/>
+						<g:Label text="PLCUA" width="100%" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+					<g:VerticalPanel width="100%">
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="NCR TV" width="215px" height="25px" horizontalAlignment="ALIGN_LEFT"/>
+							</g:Cell>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblNcrtvplcua"   />
+							</g:Cell>
+						</g:HorizontalPanel>
+				
+					
+						
+						
+					</g:VerticalPanel>
+				</g:VerticalPanel>
+				
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}">
+				<g:VerticalPanel  width="100%">
+						<g:Label styleName="{style.second-title}" height="16px"/>
+						<g:Label text="PSCRE" width="100%" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%"> 
+				
+						<g:Label text="Anulaciones por NCR" width="215px" height="25px" horizontalAlignment="ALIGN_LEFT"/>
+				
+					<g:Cell horizontalAlignment="ALIGN_RIGHT">
+						<g:Label text="" width="100px" height="25px" ui:field="lblAnulacionesNCRPSCRE"/>
+				</g:Cell>
+					</g:HorizontalPanel>
+
+						
+						
+						
+				</g:VerticalPanel>
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}" horizontalAlignment="ALIGN_LEFT">
+				<g:VerticalPanel  width="100%">
+						<g:Label styleName="{style.second-title}" height="16px"/>
+						<g:Label text="PLVCR" styleName="{style.second-title}"/>
+					</g:VerticalPanel>
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Label text="Anulaciones por NCR" width="215px" height="25px"/>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblAnulacionesNCRPLC"  />
+							</g:Cell>
+						</g:HorizontalPanel>
+						
+					
+						
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			</g:Cell>
+
+				<g:HorizontalPanel width="100%" spacing="2">
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}">
+					
+					<g:VerticalPanel width="100%">
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="NCR TV (PLCUA)" width="215px" height="25px" horizontalAlignment="ALIGN_LEFT" styleName="{style.second-title}"/>
+							</g:Cell>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblTotalNCRTVPLCUA"   />
+							</g:Cell>
+						</g:HorizontalPanel>
+				
+					<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="Anulación x NCR (PSCRE)" width="215px" height="25px" horizontalAlignment="ALIGN_LEFT" styleName="{style.second-title}"/>
+							</g:Cell>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblTotalAnulacionesNCRPSCRE"   />
+							</g:Cell>
+						</g:HorizontalPanel>
+						
+						<g:HorizontalPanel styleName="{style.border-simple}" width="100%">
+							<g:Cell verticalAlignment="ALIGN_MIDDLE">
+								<g:Label text="Diferencia" width="215px" height="25px" horizontalAlignment="ALIGN_LEFT"  styleName="{style.red-title}" />
+							</g:Cell>
+							<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblDirefenciaPLCUAPSCRE"   />
+							</g:Cell>
+						</g:HorizontalPanel>
+					
+						
+						
+					</g:VerticalPanel>
+				</g:VerticalPanel>
+				
+				<g:VerticalPanel  width="350px" styleName="{style.border-decorator}">
+				
+				<g:HorizontalPanel styleName="{style.border-simple}" width="100%"> 
+					<g:Cell width="150px" height="25px">
+						<g:Label text="Anulaciones por NCR (PSCRE)" width="215px" height="25px" styleName="{style.second-title}"/>
+					</g:Cell>
+					<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblTotalAnulacionesNCRPSCRE2"   />
+							</g:Cell>
+				 </g:HorizontalPanel>
+
+			<g:HorizontalPanel styleName="{style.border-simple}" width="100%"> 
+					<g:Cell width="150px" height="25px">
+						<g:Label text="Total Anulación Recaudaciones" width="215px" height="25px" styleName="{style.second-title}"/>
+					</g:Cell>
+					<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblTotalAnulacionPLC"   />
+							</g:Cell>
+				 </g:HorizontalPanel>
+				 	<g:HorizontalPanel styleName="{style.border-simple}" width="100%"> 
+					<g:Cell width="150px" height="25px">
+						<g:Label text="Diferencia" width="215px" height="25px"  styleName="{style.red-title}" />
+					</g:Cell>
+					<g:Cell horizontalAlignment="ALIGN_RIGHT">
+								<g:Label  width="100px" height="25px" ui:field="lblDiferenciaPSCREPLC"   />
+							</g:Cell>
+				 </g:HorizontalPanel>
+						
+						
+						
+				</g:VerticalPanel>
+				
+				
+				<g:VerticalPanel  width="350px"  horizontalAlignment="ALIGN_LEFT">
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+			
+		
+		</g:VerticalPanel>
+		
+	
+	</g:VerticalPanel>
+</ui:UiBinder>

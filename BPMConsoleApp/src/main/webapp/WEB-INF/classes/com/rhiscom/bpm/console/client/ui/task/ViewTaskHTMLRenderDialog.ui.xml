@@ -1,0 +1,65 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.panel {
+			
+			paddign: 50px;
+			
+		}
+		.panel td {
+			height: 20px !important;
+		}
+		
+		.alignRight {
+			margin-top:10px;
+			right:0px;
+			float:right;
+			margin-right:2px;
+		}
+		
+		.alignLeft {
+			margin-top:10px;
+			left:0px;
+			float:left;
+			margin-left:2px;
+		}
+		.td {
+			height: 20px !important;
+			vertical-align:top;
+
+			}
+	</ui:style>
+<g:VerticalPanel styleName="{style.panel}"  height="430px" width="90%" verticalAlignment="ALIGN_TOP" horizontalAlignment="ALIGN_CENTER">
+
+
+    <g:VerticalPanel ui:field ='verticalPanelForm'>
+        
+  		 
+  		 <g:HorizontalPanel>
+  		     <g:Hidden ui:field="user"/>
+			 <g:Hidden ui:field="password"/> 
+  		     
+  		 </g:HorizontalPanel>
+     </g:VerticalPanel>
+  
+  
+<g:VerticalPanel horizontalAlignment="ALIGN_LEFT" width="100%">
+<g:Label text="Comentarios :"/>
+<g:TextArea ui:field="txtComentario" visibleLines="2" width="500px" height="50px"/>
+</g:VerticalPanel>
+    	<g:HorizontalPanel  width="1150px" >
+				<g:HTMLPanel>
+					<div style="margin-top:10px;left:0px;float:left;margin-left:2px;">
+			    		&nbsp;
+			    	</div>
+			    </g:HTMLPanel>
+			    <g:HTMLPanel>
+			    	<div style="margin-top:10px;right:0px;float:right;margin-right:2px;">
+						<g:Button  ui:field='btnAceptar' text="Cerrar" width="80px" height="25px"  />
+					</div>
+				 </g:HTMLPanel>
+			</g:HorizontalPanel>		
+    
+</g:VerticalPanel>
+</ui:UiBinder> 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+<ui:with field='i18n' type='com.rhiscom.bpm.console.client.LocaleMessages'/>
+	<ui:style>
+		.panel {
+			
+			paddign: 50px;
+			
+		}
+		.panel td {
+			height: 20px !important;
+		}
+		
+		.alignRight {
+			margin-top:10px;
+			right:0px;
+			float:right;
+			margin-right:2px;
+		}
+		
+		.alignLeft {
+			margin-top:10px;
+			left:0px;
+			float:left;
+			margin-left:2px;
+		}
+		.td {
+			height: 20px !important;
+			vertical-align:top;
+
+			}
+		.lblError {
+		
+			background-color: #FF2828;
+			font-size: 11px;
+			color:black;
+			font-weight: bold;
+			border: 1px solid black;
+			height: 25px;
+	  }
+	  
+	  .border-decorator {
+			margin-top:6px;
+			border: 1px solid #c5c5c5;
+			 -webkit-border-radius: 5px;
+  			-moz-border-radius: 5px;
+             border-radius: 5px;
+             padding: 7px;
+
+		}
+	</ui:style>
+
+	<g:VerticalPanel styleName="{style.panel}" height="200px" width="400px" verticalAlignment="ALIGN_TOP" horizontalAlignment="ALIGN_CENTER">
+
+	
+	<g:HTML wordWrap="true" height="30px"> <h4><ui:text from='{i18n.admResolverGroups}'/>.</h4></g:HTML>
+	<g:Cell height="20px">
+		<g:Label ui:field="lblError" styleName="{style.lblError}" height="20px" width="400"/>
+	</g:Cell>
+	<g:Cell height="30">
+		<g:VerticalPanel height="147px" width="430px" verticalAlignment="ALIGN_TOP" horizontalAlignment="ALIGN_LEFT" styleName='{style.border-decorator}'>
+		<g:HorizontalPanel horizontalAlignment="ALIGN_LEFT" verticalAlignment="ALIGN_TOP">
+			<g:Label   ui:field="lblNombre" text="{i18n.name}" styleName="{style.td}" width="80px"/>
+			<g:TextBox ui:field='txtName' styleName="{style.td}"/>
+		</g:HorizontalPanel>		
+		<g:HorizontalPanel  horizontalAlignment="ALIGN_LEFT"  verticalAlignment="ALIGN_TOP">
+			<g:Label   ui:field="lblDescription" text="{i18n.description}" styleName="{style.td}" width="80px"/>
+			<g:TextArea ui:field='txtDescription' characterWidth="19" visibleLines="3"/>
+		</g:HorizontalPanel>
+		
+		
+			
+		</g:VerticalPanel>
+	</g:Cell>
+	<g:VerticalPanel height="35px"/>	
+		<g:HorizontalPanel  width="450px" >
+				<g:HTMLPanel>
+					<div style="margin-top:10px;left:0px;float:left;margin-left:2px;">
+			    		<g:Button  ui:field='btnCancelar' text="{i18n.cancel}" width="80px" height="25px"  />
+			    	</div>
+			    </g:HTMLPanel>
+			    <g:HTMLPanel>
+			    	<div style="margin-top:10px;right:0px;float:right;margin-right:2px;">
+						<g:Button  ui:field='btnGuardar' text="{i18n.save}" width="80px" height="25px"  />
+					</div>
+				 </g:HTMLPanel>
+			</g:HorizontalPanel>		
+	</g:VerticalPanel>	
+	
+	
+</ui:UiBinder>

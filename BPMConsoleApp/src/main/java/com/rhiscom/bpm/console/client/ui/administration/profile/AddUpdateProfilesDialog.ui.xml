@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:d="urn:import:gwtquery.plugins.droppable.client.gwt">
+	<ui:style src="AddUpdateProfilesDialog.css" />
+
+	<g:VerticalPanel height="500px" width="800px" spacing="2">
+		<g:HTML wordWrap="true" height="25px" horizontalAlignment="ALIGN_CENTER">
+			<h4> Administración de Perfiles del sistema</h4>
+		</g:HTML>
+		<g:Cell height="18px">
+			<g:Label ui:field="lblError" styleName="{style.lblError}"
+				height="20px" />
+		</g:Cell>
+		<g:VerticalPanel styleName='{style.border-decorator}'
+			height="81px">
+			<g:HorizontalPanel>
+				<g:Cell width="122px" verticalAlignment="ALIGN_MIDDLE">
+					<g:Label text="Perfil :" width="122px" />
+				</g:Cell>
+				<g:Cell width="139px">
+					<g:TextBox width="139px" ui:field="txtPerfil" />
+				</g:Cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Cell width="122px" verticalAlignment="ALIGN_MIDDLE">
+					<g:Label text="Descripcion :" width="122px" />
+				</g:Cell>
+				<g:Cell width="139px">
+					<g:TextBox width="139px" ui:field="txtDescription" />
+				</g:Cell>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<g:HorizontalPanel styleName='{style.border-decorator}'
+			width="795px">
+			<g:VerticalPanel height="320px" width="100%">
+				<g:HorizontalPanel width="100%"
+					verticalAlignment="ALIGN_TOP">
+					<g:Cell width="50%">
+						<d:DroppableWidget styleName='{style.cellTableAbility}'
+							ui:field='cellListAbility' />
+					</g:Cell>
+					<g:Cell width="50%">
+					    <g:ScrollPanel height="320px" width="100%">
+							<d:DragAndDropCellTree ui:field="cellTreeModules" styleName='{style.cellTableTree}' />
+						</g:ScrollPanel>
+					</g:Cell>
+				</g:HorizontalPanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel width="800px">
+			<g:HTMLPanel>
+				<div style="margin-top:10px;left:0px;float:left;margin-left:2px;">
+					<g:Button ui:field='btnCancelar' text="Cancelar" width="80px"
+						height="25px" />
+				</div>
+			</g:HTMLPanel>
+			<g:HTMLPanel>
+				<div style="margin-top:10px;right:0px;float:right;margin-right:2px;">
+					<g:Button ui:field='btnGuardar' text="Guardar" width="80px"
+						height="25px" />
+				</div>
+			</g:HTMLPanel>
+		</g:HorizontalPanel>
+	</g:VerticalPanel>
+
+</ui:UiBinder>

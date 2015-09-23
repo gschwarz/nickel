@@ -1,0 +1,2 @@
+serviceClass: com.rhiscom.bpm.console.client.remote.EmailConfigurationService
+path: 462B39D50164635BA641587615B9DC1E.gwt.rpc
